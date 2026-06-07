@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
+  --color-surface-card: var(--surface-card);
+  --color-badge-violet: var(--badge-violet);
+  --color-badge-pink: var(--badge-pink);
+  --color-badge-orange: var(--badge-orange);
+  --color-badge-blue: var(--badge-blue);
+  --color-badge-emerald: var(--badge-emerald);
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+  --radius-lg: var(--radius);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #111111;
+  --muted: #f8f9fa;
+  --muted-foreground: #6b7280;
+  --primary: #111111;
+  --primary-foreground: #ffffff;
+  --accent: #3b82f6;
+  --border: #e5e7eb;
+  --surface-card: #f5f5f5;
+  --clefmark-accent: #3b82f6;
+  --clefmark-accent-soft: #dbeafe;
+  --badge-violet: #8b5cf6;
+  --badge-pink: #ec4899;
+  --badge-orange: #fb923c;
+  --badge-blue: #3b82f6;
+  --badge-emerald: #34d399;
+  --radius: 12px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.font-display {
+  font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
+}

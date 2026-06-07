@@ -1,0 +1,26 @@
+---
+description: Clefmark marketing site scope, voice, and constraints
+globs:
+  - "**/*"
+alwaysApply: true
+---
+
+# Marketing site rules
+
+Read `MARKETING.md` in this repo before changing copy or structure.
+
+## Scope
+
+- **clefmark.com only** — static/SSR marketing pages; no product auth or tenant logic
+- **CTAs** → `NEXT_PUBLIC_APP_URL` (`https://app.clefmark.com`) for signup and login
+- **No** Firebase Admin, Firestore, map SDK, OAuth, Stripe secrets, shadcn, or app repo imports
+
+## Voice
+
+- Human, calm, operator-friendly — Airbnb clarity, Apple restraint
+- Use product nouns: **Clients**, **Explore**, **Inbox**, **Playbooks**, **Progress**
+- **Banned** in user-visible copy: lead, pipeline, prospect, CRM, funnel, conversion, enroll, nurture
+
+## Bundle
+
+Keep the site small and fast. Prefer static sections and Tailwind over heavy client JS.
