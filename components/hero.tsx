@@ -1,5 +1,6 @@
 import { CtaButton } from "@/components/cta-button";
 import { ProductMock } from "@/components/product-mock";
+import { CLEFMARK_ASSISTANT } from "@/lib/copy";
 import { appLoginUrl, appSignupUrl } from "@/lib/app-url";
 
 export function Hero() {
@@ -11,7 +12,8 @@ export function Hero() {
             Territory sales, tied together.
           </h1>
           <p className="mt-6 text-lg leading-7 text-muted-foreground md:text-xl">
-            Map, clients, inbox, and playbooks in one place for field B2B teams.
+            A custom dashboard for your team, {CLEFMARK_ASSISTANT} for every
+            conversation, and map-to-inbox workflows in one place.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <CtaButton href={appSignupUrl("team")}>Start 14-day trial</CtaButton>

@@ -1,3 +1,5 @@
+import { CLEFMARK_ASSISTANT } from "@/lib/copy";
+
 const STEPS = [
   {
     number: "1",
@@ -6,13 +8,13 @@ const STEPS = [
   },
   {
     number: "2",
-    title: "Work",
-    body: "Progress, tasks, playbooks, and scheduled outreach stay on the account.",
+    title: "Your dashboard",
+    body: "A custom view of tasks, follow-ups, and what needs your attention — built for how your team sells.",
   },
   {
     number: "3",
-    title: "Communicate",
-    body: "Email and SMS in one inbox. AI drafts follow your team library and rules.",
+    title: CLEFMARK_ASSISTANT,
+    body: "Your conversation and automation companion — drafts, sequences, and outreach grounded in your library and rules.",
   },
 ] as const;
 

@@ -7,8 +7,8 @@ export function EmpathySection() {
         </h2>
         <p className="mt-6 text-base leading-7 text-muted-foreground md:text-lg">
           When discovery, follow-up, and messaging live in different places, context
-          gets lost and territory work slows down. Clefmark keeps the map, the
-          account, and the inbox in one flow.
+          gets lost and territory work slows down. Clefmark gives your team a custom
+          dashboard, Clefmark assistant, and one flow from map to inbox.
         </p>
       </div>
     </section>

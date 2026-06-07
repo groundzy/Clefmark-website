@@ -1,4 +1,14 @@
+import { CLEFMARK_ASSISTANT } from "@/lib/copy";
+
 const POINTS = [
+  {
+    title: "Custom dashboard",
+    body: "Every rep sees what matters today — tasks, follow-ups, and territory work in one tailored view.",
+  },
+  {
+    title: CLEFMARK_ASSISTANT,
+    body: "A smart, customized companion for conversations and automation — grounded in your business, not generic templates.",
+  },
   {
     title: "Map-first",
     body: "Territory is where work starts, not an add-on.",
@@ -6,14 +16,6 @@ const POINTS = [
   {
     title: "One inbox",
     body: "Email and SMS tied to the client, not a separate tool.",
-  },
-  {
-    title: "Playbooks that match the field",
-    body: "Call, email, SMS, and print steps in team sequences.",
-  },
-  {
-    title: "Your clef",
-    body: "Industry pack, library, and AI rules define how your team works.",
   },
 ] as const;
 

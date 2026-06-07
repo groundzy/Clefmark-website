@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Clefmark — Territory sales, tied together",
   description:
-    "Map-based field sales for B2B teams. Discover on the map, work clients, reply from one inbox.",
+    "Custom dashboard and Clefmark assistant for field B2B teams. Discover on the map, work clients, reply from one inbox.",
   icons: {
     icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
     shortcut: "/icon.svg",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Clefmark — Territory sales, tied together",
     description:
-      "Map-based field sales for B2B teams. Discover on the map, work clients, reply from one inbox.",
+      "Custom dashboard and Clefmark assistant for field B2B teams. Discover on the map, work clients, reply from one inbox.",
     url: siteUrl,
     siteName: "Clefmark",
     locale: "en_US",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Clefmark — Territory sales, tied together",
     description:
-      "Map-based field sales for B2B teams. Discover on the map, work clients, reply from one inbox.",
+      "Custom dashboard and Clefmark assistant for field B2B teams. Discover on the map, work clients, reply from one inbox.",
   },
 };
 
@@ -57,7 +57,7 @@ const jsonLd = {
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
       description:
-        "Map-based field sales for B2B teams. Discover on the map, work clients, reply from one inbox.",
+        "Custom dashboard and Clefmark assistant for field B2B teams. Discover on the map, work clients, reply from one inbox.",
       offers: {
         "@type": "Offer",
         price: "29",

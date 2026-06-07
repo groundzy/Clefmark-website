@@ -37,7 +37,7 @@ export default function TermsPage() {
               </h2>
               <p className="mt-2">
                 Paid plans are billed per workspace tier. Trials convert to paid
-                subscriptions unless cancelled. Usage meters (SMS, AI, print mail)
+                subscriptions unless cancelled. Usage meters (SMS, Clefmark assistant, print mail)
                 may apply in addition to seat pricing.
               </p>
             </section>

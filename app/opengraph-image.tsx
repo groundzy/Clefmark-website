@@ -49,7 +49,7 @@ export default function OpenGraphImage() {
             maxWidth: 800,
           }}
         >
-          Map, clients, inbox, and playbooks in one place for field B2B teams.
+          Custom dashboard, Clefmark assistant, and territory tools in one place.
         </div>
         <div
           style={{
