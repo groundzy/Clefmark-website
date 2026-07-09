@@ -12,4 +12,5 @@ export const LEGAL_MAILING_ADDRESS: string | null = null;
 export const LEGAL_ROUTES = {
   privacy: "/legal/privacy",
   terms: "/legal/terms",
+  cookies: "/legal/cookies",
 } as const;

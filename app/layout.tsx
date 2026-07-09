@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Inter } from "next/font/google";
 
+import { AnalyticsProvider } from "@/components/analytics-provider";
+
 import "./globals.css";
 
 const inter = Inter({
@@ -77,12 +79,31 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${geist.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col font-sans">
+      <head>
         <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('consent', 'default', {
+                analytics_storage: 'denied',
+                ad_storage: 'denied',
+                ad_user_data: 'denied',
+                ad_personalization: 'denied',
+                wait_for_update: 500
+              });
+            `,
+          }}
         />
-        {children}
+      </head>
+      <body className="flex min-h-full flex-col font-sans">
+        <AnalyticsProvider>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          />
+          {children}
+        </AnalyticsProvider>
       </body>
     </html>
   );

@@ -1,6 +1,10 @@
+"use client";
+
 import Link from "next/link";
 
 import { ClefmarkWordmark } from "@/components/brand/clefmark-wordmark";
+import { openCookiePreferences } from "@/lib/analytics/consent";
+import { LEGAL_ROUTES } from "@/content/legal/meta";
 
 export function MarketingFooter() {
   const year = new Date().getFullYear();
@@ -12,12 +16,22 @@ export function MarketingFooter() {
           <ClefmarkWordmark className="brightness-0 invert" />
         </div>
         <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-[#a1a1aa]">
-          <Link href="/legal/privacy" className="hover:text-white">
+          <Link href={LEGAL_ROUTES.privacy} className="hover:text-white">
             Privacy
           </Link>
-          <Link href="/legal/terms" className="hover:text-white">
+          <Link href={LEGAL_ROUTES.terms} className="hover:text-white">
             Terms
           </Link>
+          <Link href={LEGAL_ROUTES.cookies} className="hover:text-white">
+            Cookies
+          </Link>
+          <button
+            type="button"
+            onClick={() => openCookiePreferences()}
+            className="hover:text-white"
+          >
+            Cookie preferences
+          </button>
           <a href="mailto:hello@clefmark.com" className="hover:text-white">
             hello@clefmark.com
           </a>

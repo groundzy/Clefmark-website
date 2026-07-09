@@ -13,7 +13,13 @@ export function TrialCta() {
           comes later.
         </p>
         <div className="mt-8">
-          <CtaButton href={appSignupUrl("team")}>Start 14-day trial</CtaButton>
+          <CtaButton
+            href={appSignupUrl("team")}
+            trackEventName="cta_signup_click"
+            trackParams={{ plan: "team", location: "trial" }}
+          >
+            Start 14-day trial
+          </CtaButton>
         </div>
       </div>
     </section>

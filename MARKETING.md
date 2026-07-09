@@ -43,7 +43,7 @@ Keep the website **small and fast** — separate from the heavy app bundle.
 | Styling | **Tailwind CSS** + shared brand tokens | Mirror app fonts/colors; no shadcn required |
 | Content | **MDX** or markdown in `content/` | Features, legal, changelog |
 | Icons | **lucide-react** | Match app |
-| Analytics | **Plausible** or **Firebase Analytics** | Privacy-friendly; no PII |
+| Analytics | **Google Analytics 4** (consent-first) | gtag on marketing; Firebase Analytics on app; no PII |
 | Forms | **Resend** + API route, or **Formspree** | Contact / demo request only |
 | Deploy | **Firebase App Hosting** | Git-connected rollouts; production on `clefmark.com` |
 | CMS (later) | Sanity or Contentlayer | v0.1: git-based markdown is enough |
@@ -203,7 +203,7 @@ Target keywords (natural, not stuffed): field sales CRM, map-based prospecting, 
 | `pricing_plan_click` | Plan card CTA |
 | `features_anchor` | Optional — pillar section views |
 
-Use Plausible custom events or Firebase Analytics — no third-party ad pixels in v0.1.
+Use Google Analytics 4 custom events with Consent Mode v2 — no third-party ad pixels in v0.1.
 
 ---
 
@@ -242,7 +242,8 @@ clefmark-website/
 ```bash
 # Public
 NEXT_PUBLIC_APP_URL=https://app.clefmark.com
-NEXT_PUBLIC_PLAUSIBLE_DOMAIN=clefmark.com   # if using Plausible
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-9V2GDKG00E
+# NEXT_PUBLIC_ANALYTICS_DISABLED=1
 
 # Server (contact form only)
 RESEND_API_KEY=

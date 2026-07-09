@@ -16,8 +16,19 @@ export function Hero() {
             conversation, and map-to-inbox workflows in one place.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <CtaButton href={appSignupUrl("team")}>Start 14-day trial</CtaButton>
-            <CtaButton href={appLoginUrl()} variant="outline">
+            <CtaButton
+              href={appSignupUrl("team")}
+              trackEventName="cta_signup_click"
+              trackParams={{ plan: "team", location: "hero" }}
+            >
+              Start 14-day trial
+            </CtaButton>
+            <CtaButton
+              href={appLoginUrl()}
+              variant="outline"
+              trackEventName="cta_signin_click"
+              trackParams={{ location: "hero" }}
+            >
               Sign in
             </CtaButton>
           </div>

@@ -1,7 +1,10 @@
+"use client";
+
 import Link from "next/link";
 
 import { ClefmarkWordmark } from "@/components/brand/clefmark-wordmark";
 import { appLoginUrl } from "@/lib/app-url";
+import { trackEvent } from "@/lib/analytics/track";
 
 export function MarketingHeader() {
   return (
@@ -12,6 +15,7 @@ export function MarketingHeader() {
         </Link>
         <a
           href={appLoginUrl()}
+          onClick={() => trackEvent("cta_signin_click", { location: "header" })}
           className="min-h-11 inline-flex items-center text-sm font-medium text-foreground hover:text-accent"
         >
           Sign in

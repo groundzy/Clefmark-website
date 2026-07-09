@@ -51,7 +51,7 @@ export const privacySections: LegalSection[] = [
     title: "Marketing site data",
     paragraphs: [
       "When you visit clefmark.com, we may collect standard server logs such as IP address, browser type, referring URL, pages viewed, and timestamps.",
-      "We may use privacy-friendly analytics (such as Plausible or Firebase Analytics) to understand aggregate traffic patterns on the marketing site. We do not use third-party advertising pixels on the marketing site.",
+      "We may use Google Analytics 4 with your consent to understand aggregate traffic patterns and product usage on clefmark.com and app.clefmark.com. Analytics cookies are optional and are not loaded until you accept them. We do not use third-party advertising pixels on the marketing site.",
       "If you submit a contact or demo request form when available, we collect the information you provide (such as name, work email, company, and message) to respond to your inquiry.",
     ],
   },

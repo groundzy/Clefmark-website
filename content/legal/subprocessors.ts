@@ -58,8 +58,8 @@ export const subprocessors: SubprocessorRow[] = [
     location: "United States",
   },
   {
-    provider: "Plausible or Firebase Analytics",
-    purpose: "Marketing site analytics (if enabled)",
-    location: "European Union or United States",
+    provider: "Google LLC (Google Analytics 4)",
+    purpose: "Optional website and product analytics (with consent)",
+    location: "United States",
   },
 ];
