@@ -1,14 +1,8 @@
-const INDUSTRIES = [
-  "Commercial services",
-  "Distribution",
-  "Equipment",
-  "Franchise development",
-  "Vertical SaaS",
-] as const;
+import { INDUSTRIES } from "@/content/marketing/home";
 
 export function TrustSection() {
   return (
-    <section id="built-for" className="px-6 py-16 md:py-24">
+    <section id="built-for" className="border-t border-border bg-muted px-6 py-16 md:py-24">
       <div className="mx-auto max-w-3xl text-center">
         <h2 className="font-display text-3xl font-semibold tracking-tight text-foreground">
           Built for teams selling to local businesses.
@@ -17,7 +11,7 @@ export function TrustSection() {
           {INDUSTRIES.map((industry) => (
             <span
               key={industry}
-              className="rounded-full border border-border bg-muted px-4 py-2 text-sm text-foreground"
+              className="rounded-full border border-border bg-background px-4 py-2 text-sm text-foreground"
             >
               {industry}
             </span>

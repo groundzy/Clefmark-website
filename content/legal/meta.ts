@@ -13,4 +13,5 @@ export const LEGAL_ROUTES = {
   privacy: "/legal/privacy",
   terms: "/legal/terms",
   cookies: "/legal/cookies",
+  security: "/legal/security",
 } as const;

@@ -25,12 +25,19 @@ npm run build
 1. Create App Hosting backend `clefmark-website` in Firebase project `clefmark`
 2. Connect this repo; set `firebase.json` `backendId` to `clefmark-website`
 3. Map custom domain `clefmark.com`
-4. Env: `NEXT_PUBLIC_APP_URL=https://app.clefmark.com` (in `apphosting.yaml`)
+4. Env: see `apphosting.yaml`
 
 ```bash
 firebase deploy --only apphosting:clefmark-website
 ```
 
-## v0.1 scope
+## v0.2 scope (shipped)
 
-Single scroll landing page at `/` plus legal stubs at `/legal/privacy` and `/legal/terms`. Multi-page IA (`/features`, `/pricing`, etc.) deferred per MARKETING.md.
+Multi-page marketing site:
+
+- `/` — home
+- `/features`, `/pricing`, `/about`, `/contact`
+- `/for/field-sales` — SEO intent page
+- `/legal/privacy`, `/legal/terms`, `/legal/cookies`, `/legal/security`
+- `/llms.txt` — AI discoverability
+- GA4 consent-first analytics with funnel events

@@ -4,12 +4,10 @@ import { LegalDocument } from "@/components/legal-document";
 import { LegalPageLayout } from "@/components/legal-page-layout";
 import { LEGAL_ROUTES } from "@/content/legal/meta";
 import { privacySections } from "@/content/legal/privacy";
+import { SEO_PAGES } from "@/content/marketing/seo";
+import { createPageMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
-  title: "Privacy · Clefmark",
-  description:
-    "How Clefmark, Inc. collects, uses, and protects information on clefmark.com and app.clefmark.com.",
-};
+export const metadata: Metadata = createPageMetadata(SEO_PAGES.privacy);
 
 export default function PrivacyPage() {
   return (

@@ -1,0 +1,44 @@
+# Clefmark
+
+> Territory sales OS for B2B field teams.
+
+Clefmark is a territory sales platform for B2B teams whose reps work in the real world — driving routes, visiting locations, and building relationships with businesses that have a physical address.
+
+Unlike desk-first tools built around contact lists, Clefmark starts from where: a map, a territory, a place worth pursuing. Reps discover clients on the map, work them through playbooks, and communicate from one inbox — email, SMS, and print mail — with Clefmark assistant grounded in each organization's industry, library, and rules.
+
+## Who it's for
+
+B2B companies with 5–50 field reps selling to local businesses with physical locations: commercial services, distribution, equipment, franchise development, vertical SaaS, and similar.
+
+## Product pillars
+
+- Discover — map and list search with Google, Apple, Yelp; territory filters
+- Clients — accounts on your map with contacts, progress, tasks, deals, timeline
+- Communicate — unified Inbox for email and SMS
+- Automate — scheduled email, SMS, and print mail
+- Playbooks — team sequences with call, email, SMS, print, task, wait steps
+- Program — team and personal library; activity tracking
+- Customize — industry pack, assistant rules, search presets, templates
+
+## Pricing (USD)
+
+- Starter: $29/mo, 1 seat
+- Team: $114/mo, up to 5 seats
+- Growth: $199/mo, up to 10 seats
+- Scale: $399/mo, up to 25 seats
+- 14-day trial, no card required
+
+## Key URLs
+
+- Home: https://clefmark.com/
+- Features: https://clefmark.com/features
+- Pricing: https://clefmark.com/pricing
+- About: https://clefmark.com/about
+- Field sales: https://clefmark.com/for/field-sales
+- Contact: https://clefmark.com/contact
+- App signup: https://app.clefmark.com/signup
+- App login: https://app.clefmark.com/login
+
+## Contact
+
+hello@clefmark.com

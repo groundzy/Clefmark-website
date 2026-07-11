@@ -1,19 +1,25 @@
 # Clefmark — Marketing Website
 
-**Status:** v0.1 one-page live in repo — multi-page IA deferred  
+**Status:** v0.2 multi-page — home, features, pricing, about, contact, field-sales, legal, analytics, llms.txt  
 **Repo path:** `c:\Clefmark-website` (sibling to product app `c:\Clefmark`)  
 **Domain:** `clefmark.com` (marketing) → app at `https://app.clefmark.com`  
-**Product context:** Clefmark app [README.md](https://github.com/clefmark/clefmark/blob/main/README.md)
+**Product context:** [ABOUT_CLEFMARK.md](https://github.com/clefmark/clefmark/blob/main/docs/ABOUT_CLEFMARK.md) in app repo
 
-### v0.1 shipped (one-page)
+### v0.2 shipped
 
 | Route | Status |
 |-------|--------|
-| `/` | Single scroll — hero, story, how it works, why, built-for, trial CTA |
-| `/legal/privacy` | Draft stub — human review before publish |
-| `/legal/terms` | Draft stub — human review before publish |
+| `/` | Home — hero, empathy, workflow, pillars, comparison, built-for, pricing teaser, trial CTA |
+| `/features` | Seven pillars + FAQ + section view tracking |
+| `/pricing` | Four tiers + FAQ + plan click tracking |
+| `/about` | Entity page — clef+mark, ICP, differentiation |
+| `/contact` | Demo request form (Resend) |
+| `/for/field-sales` | SEO/AI intent page |
+| `/legal/privacy`, `/terms`, `/cookies`, `/security` | Legal (draft mode until human review) |
+| `/llms.txt` | Machine-readable product summary for AI |
+| Analytics | GA4 consent-first — see event catalog below |
 
-Deferred: `/features`, `/pricing`, `/contact`, `/about`, `/blog`, analytics.
+Deferred: `/blog`, `/customers` (real logos), programmatic industry pages.
 
 ---
 
@@ -184,26 +190,33 @@ Agent drafts from standard SaaS templates; **you review before publish**.
 | Item | Value |
 |------|-------|
 | **Title template** | `%s · Clefmark` |
-| **Default description** | Map-based CRM and sales communication for B2B field teams. |
-| **OG image** | Static `og.png` — hero + logo |
-| **Structured data** | `Organization` + `SoftwareApplication` JSON-LD on home |
-| **Sitemap** | `app/sitemap.ts` — all public routes |
+| **Default description** | Territory sales OS for field B2B teams. |
+| **OG image** | Dynamic `opengraph-image.tsx` |
+| **Structured data** | Organization, SoftwareApplication, WebSite, FAQPage, BreadcrumbList |
+| **Sitemap** | `app/sitemap.ts` — 10 public routes |
 | **robots** | Allow all; disallow `/api/` |
+| **llms.txt** | `public/llms.txt` — AI discoverability |
 
-Target keywords (natural, not stuffed): field sales CRM, map-based prospecting, territory sales software, sales playbook automation.
+Target keywords (natural, not stuffed): territory sales software, field sales, map-based discovery, sales playbooks, unified inbox.
 
 ---
 
 ## Analytics & conversion
 
-| Event | Trigger |
-|-------|---------|
-| `cta_signup_click` | Hero / header / footer signup |
-| `cta_demo_click` | Contact or “Book demo” |
-| `pricing_plan_click` | Plan card CTA |
-| `features_anchor` | Optional — pillar section views |
+| Event | Params | Trigger |
+|-------|--------|---------|
+| `cta_signup_click` | `location`, `plan` | Trial CTAs |
+| `cta_signin_click` | `location` | Sign in links |
+| `pricing_plan_click` | `plan`, `location` | Pricing card CTA |
+| `cta_demo_click` | `location` | Contact form submit |
+| `features_section_view` | `section_id` | Features pillar 50% visible |
+| `scroll_depth` | `percent` | 25 / 50 / 75 / 100 |
+| `nav_click` | `location` | Header/footer nav |
+| `faq_expand` | `question_id` | FAQ accordion |
 
-Use Google Analytics 4 custom events with Consent Mode v2 — no third-party ad pixels in v0.1.
+**UTM convention** — signup links append `utm_source=clefmark&utm_medium=website&utm_campaign={page}` and preserve inbound `utm_*` from session. Cross-domain linker: `clefmark.com` ↔ `app.clefmark.com`.
+
+Use Google Analytics 4 with Consent Mode v2 — no third-party ad pixels in v0.1.
 
 ---
 
@@ -303,3 +316,4 @@ Can run **in parallel** with app Layer 0–1.
 | 2026-06-07 | Domain locked — `clefmark.com` marketing, `app.clefmark.com` product (ADR-009) |
 | 2026-06-08 | v0 one-page implemented in `clefmark-website` repo — scroll home + legal stubs |
 | 2026-06-08 | v0 one-page launch — `clefmark-website` repo at `c:\Clefmark-website`; home scroll + legal stubs; M0–M1 |
+| 2026-07-10 | v0.2 multi-page upgrade — features, pricing, about, contact, field-sales, security, llms.txt, GA4 funnel events, UTM passthrough |

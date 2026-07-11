@@ -17,21 +17,22 @@ The product app uses backend `clefmark`. Marketing needs a **separate** backend 
    - Connect this repo (GitHub) or deploy via CLI from `c:\Clefmark-website`
 2. Confirm `firebase.json` has `"backendId": "clefmark-website"`
 3. Map custom domain **`clefmark.com`** to the `clefmark-website` backend (not the product backend)
-4. Env var `NEXT_PUBLIC_APP_URL=https://app.clefmark.com` is set in `apphosting.yaml`
+4. Env vars in `apphosting.yaml`; set `RESEND_API_KEY` as secret for contact form
 
 ## CLI deploy (after backend exists)
 
 ```bash
-npx firebase deploy --only apphosting:clefmark-website --project clefmark
+npx firebase deploy --only apphosting:clefmark-website --project clefmark-app
 ```
-
-If prompted to create the backend, confirm creation in the interactive wizard.
 
 ## Post-deploy smoke test
 
-- [ ] `https://clefmark.com/` loads the one-page landing
-- [ ] **Start 14-day trial** → `https://app.clefmark.com/signup?plan=team`
+- [ ] `https://clefmark.com/` loads home with nav (Features, Pricing, About)
+- [ ] **Start 14-day trial** → `https://app.clefmark.com/signup?plan=starter` (preserves utm_*)
 - [ ] **Sign in** → `https://app.clefmark.com/login`
-- [ ] `/legal/privacy` and `/legal/terms` return 200
-- [ ] `/sitemap.xml` and `/robots.txt` return 200
+- [ ] `/features`, `/pricing`, `/about`, `/contact`, `/for/field-sales` return 200
+- [ ] `/legal/privacy`, `/legal/terms`, `/legal/cookies`, `/legal/security` return 200
+- [ ] `/sitemap.xml`, `/robots.txt`, `/llms.txt` return 200
 - [ ] Open Graph preview shows headline (via `/opengraph-image`)
+- [ ] Cookie consent banner → GA4 loads after Accept
+- [ ] Contact form delivers email (requires `RESEND_API_KEY`)

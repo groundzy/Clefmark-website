@@ -1,3 +1,12 @@
+export type MarketingEventParams = {
+  plan?: string;
+  location?: string;
+  section_id?: string;
+  question_id?: string;
+  percent?: number;
+  destination?: string;
+};
+
 const FORBIDDEN_PARAM_KEYS = new Set([
   "email",
   "name",
@@ -8,12 +17,6 @@ const FORBIDDEN_PARAM_KEYS = new Set([
   "body",
   "subject",
 ]);
-
-export type MarketingEventParams = {
-  plan?: string;
-  location?: string;
-  section_id?: string;
-};
 
 export function sanitizeEventParams(
   params?: MarketingEventParams,

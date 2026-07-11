@@ -1,38 +1,38 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
 import { ConsentBanner } from "@/components/consent-banner";
-import { readAnalyticsConsent } from "@/lib/analytics/consent";
 import {
   loadGtagScript,
   setDefaultConsentMode,
   updateConsentMode,
 } from "@/lib/analytics/gtag";
+import { useAnalyticsConsent } from "@/lib/analytics/use-analytics-consent";
+import { useScrollDepth } from "@/lib/analytics/use-scroll-depth";
 import { trackPageView } from "@/lib/analytics/track";
+import { useUtmCapture } from "@/lib/analytics/use-utm-capture";
 
 export function AnalyticsProvider({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const [consent, setConsent] = useState<"granted" | "denied" | "unset">(() =>
-    typeof window === "undefined" ? "unset" : readAnalyticsConsent(),
-  );
+  const consent = useAnalyticsConsent();
+
+  useUtmCapture();
+  useScrollDepth();
 
   useEffect(() => {
     setDefaultConsentMode();
   }, []);
 
-  const handleConsentChange = useCallback((next: "granted" | "denied") => {
-    updateConsentMode(next === "granted");
-    if (next === "granted") {
-      loadGtagScript();
-    }
-    setConsent(next);
-  }, []);
-
   useEffect(() => {
     if (consent === "granted") {
+      updateConsentMode(true);
       loadGtagScript();
+      return;
+    }
+    if (consent === "denied") {
+      updateConsentMode(false);
     }
   }, [consent]);
 
@@ -45,7 +45,7 @@ export function AnalyticsProvider({ children }: { children: React.ReactNode }) {
   return (
     <>
       {children}
-      <ConsentBanner onConsentChange={handleConsentChange} />
+      <ConsentBanner />
     </>
   );
 }

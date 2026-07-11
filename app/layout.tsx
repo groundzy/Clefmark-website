@@ -2,6 +2,15 @@ import type { Metadata } from "next";
 import { Geist, Inter } from "next/font/google";
 
 import { AnalyticsProvider } from "@/components/analytics-provider";
+import { JsonLdScript } from "@/components/json-ld-script";
+import {
+  buildJsonLdGraph,
+  organizationJsonLd,
+  softwareApplicationJsonLd,
+  webSiteJsonLd,
+} from "@/lib/seo/json-ld";
+import { getGscVerification } from "@/lib/seo/metadata";
+import { SEO_DEFAULT } from "@/content/marketing/seo";
 
 import "./globals.css";
 
@@ -15,58 +24,41 @@ const geist = Geist({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://clefmark.com";
+const rootJsonLd = buildJsonLdGraph(
+  organizationJsonLd(),
+  softwareApplicationJsonLd(),
+  webSiteJsonLd(),
+);
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  title: "Clefmark — Territory sales, tied together",
-  description:
-    "Custom dashboard and Clefmark assistant for field B2B teams. Discover on the map, work clients, reply from one inbox.",
+  metadataBase: new URL("https://clefmark.com"),
+  title: {
+    default: SEO_DEFAULT.title,
+    template: "%s · Clefmark",
+  },
+  description: SEO_DEFAULT.description,
   icons: {
-    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
-    shortcut: "/icon.svg",
-    apple: "/icon.svg",
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "Clefmark — Territory sales, tied together",
-    description:
-      "Custom dashboard and Clefmark assistant for field B2B teams. Discover on the map, work clients, reply from one inbox.",
-    url: siteUrl,
+    title: `${SEO_DEFAULT.title} · Clefmark`,
+    description: SEO_DEFAULT.description,
+    url: "https://clefmark.com",
     siteName: "Clefmark",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Clefmark — Territory sales, tied together",
-    description:
-      "Custom dashboard and Clefmark assistant for field B2B teams. Discover on the map, work clients, reply from one inbox.",
+    title: `${SEO_DEFAULT.title} · Clefmark`,
+    description: SEO_DEFAULT.description,
   },
-};
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      name: "Clefmark",
-      url: siteUrl,
-      email: "hello@clefmark.com",
-    },
-    {
-      "@type": "SoftwareApplication",
-      name: "Clefmark",
-      applicationCategory: "BusinessApplication",
-      operatingSystem: "Web",
-      description:
-        "Custom dashboard and Clefmark assistant for field B2B teams. Discover on the map, work clients, reply from one inbox.",
-      offers: {
-        "@type": "Offer",
-        price: "29",
-        priceCurrency: "USD",
-      },
-    },
-  ],
+  ...getGscVerification(),
 };
 
 export default function RootLayout({
@@ -98,10 +90,7 @@ export default function RootLayout({
       </head>
       <body className="flex min-h-full flex-col font-sans">
         <AnalyticsProvider>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-          />
+          <JsonLdScript data={rootJsonLd} />
           {children}
         </AnalyticsProvider>
       </body>

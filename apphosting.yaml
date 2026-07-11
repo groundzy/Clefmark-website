@@ -19,3 +19,12 @@ env:
     availability:
       - BUILD
       - RUNTIME
+  - variable: CONTACT_FROM_EMAIL
+    value: Clefmark <contact@send.clefmark.com>
+    availability:
+      - RUNTIME
+  - variable: CONTACT_TO_EMAIL
+    value: hello@clefmark.com
+    availability:
+      - RUNTIME
+  # Set RESEND_API_KEY in Firebase console (secret) for contact form

@@ -5,11 +5,10 @@ import { LegalPageLayout } from "@/components/legal-page-layout";
 import { LEGAL_ROUTES } from "@/content/legal/meta";
 import { termsSections } from "@/content/legal/terms";
 
-export const metadata: Metadata = {
-  title: "Terms · Clefmark",
-  description:
-    "Terms of Service for Clefmark, Inc. — subscriptions, acceptable use, and your rights when using the Clefmark platform.",
-};
+import { SEO_PAGES } from "@/content/marketing/seo";
+import { createPageMetadata } from "@/lib/seo/metadata";
+
+export const metadata: Metadata = createPageMetadata(SEO_PAGES.terms);
 
 export default function TermsPage() {
   return (

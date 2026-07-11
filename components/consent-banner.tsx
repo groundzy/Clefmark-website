@@ -4,10 +4,10 @@ import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 
 import {
-  readAnalyticsConsent,
   writeAnalyticsConsent,
   type AnalyticsConsent,
 } from "@/lib/analytics/consent";
+import { useAnalyticsConsent } from "@/lib/analytics/use-analytics-consent";
 import { LEGAL_ROUTES } from "@/content/legal/meta";
 
 type ConsentBannerProps = {
@@ -15,13 +15,13 @@ type ConsentBannerProps = {
 };
 
 export function ConsentBanner({ onConsentChange }: ConsentBannerProps) {
-  const [visible, setVisible] = useState(() => readAnalyticsConsent() === "unset");
-  const [manageOpen, setManageOpen] = useState(false);
+  const storedConsent = useAnalyticsConsent();
+  const [preferencesOpen, setPreferencesOpen] = useState(false);
+  const [sessionDismissed, setSessionDismissed] = useState(false);
 
   useEffect(() => {
     function onOpenPreferences() {
-      setManageOpen(true);
-      setVisible(true);
+      setPreferencesOpen(true);
     }
     window.addEventListener("clefmark:open-cookie-preferences", onOpenPreferences);
     return () => {
@@ -34,13 +34,20 @@ export function ConsentBanner({ onConsentChange }: ConsentBannerProps) {
 
   const applyConsent = useCallback(
     (choice: Exclude<AnalyticsConsent, "unset">) => {
-      writeAnalyticsConsent(choice);
-      setVisible(false);
-      setManageOpen(false);
+      setPreferencesOpen(false);
+      setSessionDismissed(true);
+      try {
+        writeAnalyticsConsent(choice);
+      } catch {
+        // Dismiss even when localStorage is unavailable (private browsing, etc.)
+      }
       onConsentChange?.(choice);
     },
     [onConsentChange],
   );
+
+  const visible =
+    preferencesOpen || (storedConsent === "unset" && !sessionDismissed);
 
   if (!visible) {
     return null;
@@ -55,10 +62,10 @@ export function ConsentBanner({ onConsentChange }: ConsentBannerProps) {
       <div className="mx-auto flex max-w-4xl flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div className="space-y-1">
           <p id="cookie-banner-title" className="text-sm font-medium text-foreground">
-            {manageOpen ? "Cookie preferences" : "Cookies on Clefmark"}
+            {preferencesOpen ? "Cookie preferences" : "Cookies on Clefmark"}
           </p>
           <p className="text-sm text-muted-foreground">
-            {manageOpen
+            {preferencesOpen
               ? "Analytics cookies help us understand how visitors use clefmark.com. You can change this anytime from the footer."
               : "We use optional analytics cookies to understand site usage and improve Clefmark. See our cookie policy for details."}
           </p>

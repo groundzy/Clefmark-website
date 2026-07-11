@@ -1,6 +1,7 @@
 import { CtaButton } from "@/components/cta-button";
 import { ProductMock } from "@/components/product-mock";
-import { CLEFMARK_ASSISTANT } from "@/lib/copy";
+import { HERO } from "@/content/marketing/home";
+import { MARKETING_ROUTES } from "@/content/marketing/routes";
 import { appLoginUrl, appSignupUrl } from "@/lib/app-url";
 
 export function Hero() {
@@ -9,19 +10,26 @@ export function Hero() {
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="font-display text-5xl font-semibold tracking-tight text-foreground md:text-6xl md:leading-[1.05]">
-            Territory sales, tied together.
+            {HERO.headline}
           </h1>
           <p className="mt-6 text-lg leading-7 text-muted-foreground md:text-xl">
-            A custom dashboard for your team, {CLEFMARK_ASSISTANT} for every
-            conversation, and map-to-inbox workflows in one place.
+            {HERO.subhead}
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <CtaButton
-              href={appSignupUrl("team")}
+              href={appSignupUrl("starter", { campaign: "hero" })}
               trackEventName="cta_signup_click"
-              trackParams={{ plan: "team", location: "hero" }}
+              trackParams={{ plan: "starter", location: "hero" }}
             >
               Start 14-day trial
+            </CtaButton>
+            <CtaButton
+              href={MARKETING_ROUTES.features}
+              variant="outline"
+              trackEventName="nav_click"
+              trackParams={{ location: "hero_features" }}
+            >
+              See features
             </CtaButton>
             <CtaButton
               href={appLoginUrl()}

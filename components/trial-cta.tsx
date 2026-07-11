@@ -1,4 +1,5 @@
 import { CtaButton } from "@/components/cta-button";
+import { TRIAL_CTA } from "@/content/marketing/home";
 import { appSignupUrl } from "@/lib/app-url";
 
 export function TrialCta() {
@@ -6,17 +7,16 @@ export function TrialCta() {
     <section id="trial" className="border-t border-border bg-muted px-6 py-16 md:py-24">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-3xl font-semibold tracking-tight text-foreground">
-          Start with a 14-day trial.
+          {TRIAL_CTA.headline}
         </h2>
         <p className="mt-4 text-base leading-7 text-muted-foreground">
-          Plans from $29/mo for solo reps to teams up to 25 seats. Billing setup
-          comes later.
+          {TRIAL_CTA.body}
         </p>
         <div className="mt-8">
           <CtaButton
-            href={appSignupUrl("team")}
+            href={appSignupUrl("starter", { campaign: "trial" })}
             trackEventName="cta_signup_click"
-            trackParams={{ plan: "team", location: "trial" }}
+            trackParams={{ plan: "starter", location: "trial" }}
           >
             Start 14-day trial
           </CtaButton>

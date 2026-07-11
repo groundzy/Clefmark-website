@@ -2,6 +2,8 @@ export type AnalyticsConsent = "granted" | "denied" | "unset";
 
 const STORAGE_KEY = "clefmark_analytics_consent";
 
+export const ANALYTICS_CONSENT_CHANGE_EVENT = "clefmark:analytics-consent-change";
+
 export function readAnalyticsConsent(): AnalyticsConsent {
   if (typeof window === "undefined") {
     return "unset";
@@ -18,6 +20,7 @@ export function writeAnalyticsConsent(consent: Exclude<AnalyticsConsent, "unset"
     return;
   }
   window.localStorage.setItem(STORAGE_KEY, consent);
+  window.dispatchEvent(new Event(ANALYTICS_CONSENT_CHANGE_EVENT));
 }
 
 export function hasAnalyticsConsent(): boolean {
