@@ -65,27 +65,27 @@ export const FIELD_SALES_FAQ: readonly FaqItem[] = [
   },
 ] as const;
 
-export const COMMERCIAL_TRADES_FAQ: readonly FaqItem[] = [
+export const COMMERCIAL_PEST_CONTROL_FAQ: readonly FaqItem[] = [
   {
-    id: "who-trades",
-    question: "Is Clefmark built for commercial trades and facility services?",
+    id: "who-pest",
+    question: "Is Clefmark built for commercial pest control?",
     answer:
-      "Yes. Clefmark is a fit for HVAC, electrical, plumbing, fire protection, janitorial, and similar B2B teams with field reps who sell to local businesses with a physical address — not residential door-to-door canvassing.",
+      "Yes. Clefmark is a fit for independent commercial pest-control teams with field reps who sell to local businesses — restaurants, hotels, property managers, retailers, and similar — not residential door-to-door canvassing.",
   },
   {
-    id: "trades-map",
+    id: "pest-map",
     question: "Can reps find local accounts on a map?",
     answer:
       "Yes. Explore uses Google Places for map and list search. Reps preview a place and save it to Clients.",
   },
   {
-    id: "trades-follow-up",
+    id: "pest-follow-up",
     question: "How does follow-up work after a visit or a pin?",
     answer:
       "Work the account from Gmail in Clefmark, run a playbook with email, call, task, and wait steps, and use Clefmark assistant to draft messages from your library and rules.",
   },
   {
-    id: "trades-trial",
+    id: "pest-trial",
     question: "How does the trial work?",
     answer:
       "Every new workspace starts with a 14-day trial. No card required. During the trial you can send up to 25 outbound emails and create up to 50 Clefmark assistant drafts.",

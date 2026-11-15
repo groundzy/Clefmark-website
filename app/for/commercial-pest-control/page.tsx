@@ -2,12 +2,12 @@ import { CtaButton } from "@/components/cta-button";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { JsonLdScript } from "@/components/json-ld-script";
 import { MarketingPageLayout } from "@/components/marketing-page-layout";
-import { COMMERCIAL_TRADES_FAQ } from "@/content/marketing/faq";
+import { COMMERCIAL_PEST_CONTROL_FAQ } from "@/content/marketing/faq";
 import {
-  COMMERCIAL_TRADES_INTRO,
-  COMMERCIAL_TRADES_PILLARS,
-  COMMERCIAL_TRADES_PROBLEM,
-} from "@/content/marketing/commercial-trades";
+  COMMERCIAL_PEST_CONTROL_INTRO,
+  COMMERCIAL_PEST_CONTROL_PILLARS,
+  COMMERCIAL_PEST_CONTROL_PROBLEM,
+} from "@/content/marketing/commercial-pest-control";
 import { SEO_PAGES } from "@/content/marketing/seo";
 import { appSignupUrl } from "@/lib/app-url";
 import {
@@ -17,53 +17,53 @@ import {
 } from "@/lib/seo/json-ld";
 import { createPageMetadata } from "@/lib/seo/metadata";
 
-export const metadata = createPageMetadata(SEO_PAGES.commercialTrades);
+export const metadata = createPageMetadata(SEO_PAGES.commercialPestControl);
 
 const jsonLd = buildJsonLdGraph(
   breadcrumbJsonLd([
     { name: "Home", path: "/" },
-    { name: "Commercial trades", path: "/for/commercial-trades" },
+    { name: "Commercial pest control", path: "/for/commercial-pest-control" },
   ]),
-  faqPageJsonLd(COMMERCIAL_TRADES_FAQ),
+  faqPageJsonLd(COMMERCIAL_PEST_CONTROL_FAQ),
 );
 
-export default function CommercialTradesPage() {
+export default function CommercialPestControlPage() {
   return (
     <MarketingPageLayout>
       <JsonLdScript data={jsonLd} />
       <div className="mx-auto max-w-3xl px-6 py-16">
         <p className="text-base leading-7 text-muted-foreground">
-          {COMMERCIAL_TRADES_INTRO.definitive}
+          {COMMERCIAL_PEST_CONTROL_INTRO.definitive}
         </p>
         <h1 className="mt-6 font-display text-4xl font-semibold tracking-tight text-foreground md:text-5xl">
-          {COMMERCIAL_TRADES_INTRO.headline}
+          {COMMERCIAL_PEST_CONTROL_INTRO.headline}
         </h1>
         <p className="mt-4 text-lg leading-7 text-muted-foreground">
-          {COMMERCIAL_TRADES_INTRO.subhead}
+          {COMMERCIAL_PEST_CONTROL_INTRO.subhead}
         </p>
 
         <section className="mt-12">
           <h2 className="font-display text-2xl font-semibold text-foreground">
-            {COMMERCIAL_TRADES_PROBLEM.headline}
+            {COMMERCIAL_PEST_CONTROL_PROBLEM.headline}
           </h2>
           <ul className="mt-4 space-y-3">
-            {COMMERCIAL_TRADES_PROBLEM.points.map((point) => (
+            {COMMERCIAL_PEST_CONTROL_PROBLEM.points.map((point) => (
               <li key={point} className="text-sm leading-6 text-muted-foreground">
                 {point}
               </li>
             ))}
           </ul>
           <p className="mt-4 text-base font-medium text-foreground">
-            {COMMERCIAL_TRADES_PROBLEM.resolution}
+            {COMMERCIAL_PEST_CONTROL_PROBLEM.resolution}
           </p>
         </section>
 
         <section className="mt-12">
           <h2 className="font-display text-2xl font-semibold text-foreground">
-            Built for commercial trades
+            Built for commercial pest control
           </h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
-            {COMMERCIAL_TRADES_PILLARS.map((pillar) => (
+            {COMMERCIAL_PEST_CONTROL_PILLARS.map((pillar) => (
               <div
                 key={pillar.title}
                 className="rounded-xl border border-border bg-background p-5"
@@ -79,7 +79,7 @@ export default function CommercialTradesPage() {
 
         <section className="mt-12">
           <h2 className="font-display text-2xl font-semibold text-foreground">FAQ</h2>
-          <FaqAccordion items={COMMERCIAL_TRADES_FAQ} className="mt-6" />
+          <FaqAccordion items={COMMERCIAL_PEST_CONTROL_FAQ} className="mt-6" />
         </section>
 
         <section className="mt-12 rounded-xl border border-border bg-muted p-8 text-center">
@@ -88,9 +88,9 @@ export default function CommercialTradesPage() {
           </h2>
           <div className="mt-6">
             <CtaButton
-              href={appSignupUrl("starter", { campaign: "commercial_trades" })}
+              href={appSignupUrl("starter", { campaign: "commercial_pest_control" })}
               trackEventName="cta_signup_click"
-              trackParams={{ plan: "starter", location: "commercial_trades" }}
+              trackParams={{ plan: "starter", location: "commercial_pest_control" }}
             >
               Start 14-day trial
             </CtaButton>

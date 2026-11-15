@@ -5,7 +5,7 @@ export const MARKETING_ROUTES = {
   about: "/about",
   contact: "/contact",
   fieldSales: "/for/field-sales",
-  commercialTrades: "/for/commercial-trades",
+  commercialPestControl: "/for/commercial-pest-control",
 } as const;
 
 export const SITE_URL = "https://clefmark.com";
