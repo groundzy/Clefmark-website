@@ -52,6 +52,12 @@ export const SEO_PAGES: Record<string, SeoConfig> = {
       "Map-based discovery, client management, unified Inbox, and playbooks for reps who sell by territory — not from a desk.",
     path: MARKETING_ROUTES.fieldSales,
   },
+  commercialTrades: {
+    title: "Territory sales software for commercial trades",
+    description:
+      "Run your commercial-trades territory from the map, not a spreadsheet. Find local accounts, keep them in Clients, and follow up from Gmail with playbooks and assistant drafts.",
+    path: MARKETING_ROUTES.commercialTrades,
+  },
   privacy: {
     title: "Privacy",
     description:
