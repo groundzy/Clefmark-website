@@ -18,6 +18,7 @@ export function FaqAccordion({ items, className }: FaqAccordionProps) {
     <div className={cn("space-y-2", className)}>
       {items.map((item) => {
         const isOpen = openId === item.id;
+        const panelId = `faq-panel-${item.id}`;
         return (
           <div key={item.id} className="rounded-xl border border-border bg-background">
             <button
@@ -31,12 +32,16 @@ export function FaqAccordion({ items, className }: FaqAccordionProps) {
               }}
               className="flex w-full items-center justify-between px-5 py-4 text-left text-sm font-medium text-foreground"
               aria-expanded={isOpen}
+              aria-controls={panelId}
             >
               {item.question}
               <span className="ml-4 text-muted-foreground">{isOpen ? "−" : "+"}</span>
             </button>
             {isOpen ? (
-              <p className="border-t border-border px-5 py-4 text-sm leading-6 text-muted-foreground">
+              <p
+                id={panelId}
+                className="border-t border-border px-5 py-4 text-sm leading-6 text-muted-foreground"
+              >
                 {item.answer}
               </p>
             ) : null}

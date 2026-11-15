@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import {
   writeAnalyticsConsent,
@@ -14,10 +14,13 @@ type ConsentBannerProps = {
   onConsentChange?: (consent: Exclude<AnalyticsConsent, "unset">) => void;
 };
 
+const BANNER_HEIGHT_VAR = "--cookie-banner-height";
+
 export function ConsentBanner({ onConsentChange }: ConsentBannerProps) {
   const storedConsent = useAnalyticsConsent();
   const [preferencesOpen, setPreferencesOpen] = useState(false);
   const [sessionDismissed, setSessionDismissed] = useState(false);
+  const bannerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     function onOpenPreferences() {
@@ -49,12 +52,37 @@ export function ConsentBanner({ onConsentChange }: ConsentBannerProps) {
   const visible =
     preferencesOpen || (storedConsent === "unset" && !sessionDismissed);
 
+  useEffect(() => {
+    const root = document.documentElement;
+    if (!visible) {
+      root.style.setProperty(BANNER_HEIGHT_VAR, "0px");
+      return;
+    }
+    const el = bannerRef.current;
+    if (!el) {
+      return;
+    }
+    const syncHeight = () => {
+      root.style.setProperty(BANNER_HEIGHT_VAR, `${el.offsetHeight}px`);
+    };
+    syncHeight();
+    const observer = new ResizeObserver(syncHeight);
+    observer.observe(el);
+    window.addEventListener("resize", syncHeight);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", syncHeight);
+      root.style.setProperty(BANNER_HEIGHT_VAR, "0px");
+    };
+  }, [visible, preferencesOpen]);
+
   if (!visible) {
     return null;
   }
 
   return (
     <div
+      ref={bannerRef}
       role="dialog"
       aria-labelledby="cookie-banner-title"
       className="fixed inset-x-0 bottom-0 z-[100] border-t border-border bg-background p-4 shadow-lg sm:p-6"

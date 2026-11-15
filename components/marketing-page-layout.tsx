@@ -9,7 +9,7 @@ export function MarketingPageLayout({ children }: MarketingPageLayoutProps) {
   return (
     <>
       <MarketingHeader />
-      <main className="flex-1">{children}</main>
+      <main className="flex-1 pb-[var(--cookie-banner-height,0px)]">{children}</main>
       <MarketingFooter />
     </>
   );
