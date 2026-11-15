@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Clefmark — Territory sales, tied together";
+export const alt = "Clefmark — Territory sales software that starts on the map";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -21,25 +21,15 @@ export default function OpenGraphImage() {
       >
         <div
           style={{
-            fontSize: 72,
+            fontSize: 56,
             fontWeight: 600,
             color: "#111111",
-            letterSpacing: "-2px",
-            lineHeight: 1.05,
+            letterSpacing: "-1.5px",
+            lineHeight: 1.1,
+            maxWidth: 1000,
           }}
         >
-          Territory sales,
-        </div>
-        <div
-          style={{
-            fontSize: 72,
-            fontWeight: 600,
-            color: "#111111",
-            letterSpacing: "-2px",
-            lineHeight: 1.05,
-          }}
-        >
-          tied together.
+          Territory sales software that starts on the map.
         </div>
         <div
           style={{
@@ -49,7 +39,7 @@ export default function OpenGraphImage() {
             maxWidth: 800,
           }}
         >
-          Custom dashboard, Clefmark assistant, and territory tools in one place.
+          Discover on the map, work Clients, and follow up from Gmail.
         </div>
         <div
           style={{

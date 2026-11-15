@@ -18,11 +18,20 @@ export function createPageMetadata(config: SeoConfig): Metadata {
       siteName: "Clefmark",
       locale: "en_US",
       type: "website",
+      images: [
+        {
+          url: "/opengraph-image",
+          width: 1200,
+          height: 630,
+          alt: "Territory sales software that starts on the map · Clefmark",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: `${config.title} · Clefmark`,
       description: config.description,
+      images: ["/opengraph-image"],
     },
   };
 }
