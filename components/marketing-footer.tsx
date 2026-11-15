@@ -14,6 +14,7 @@ const PRODUCT_LINKS = [
   { href: MARKETING_ROUTES.about, label: "About" },
   { href: MARKETING_ROUTES.contact, label: "Contact" },
   { href: MARKETING_ROUTES.fieldSales, label: "Field sales" },
+  { href: MARKETING_ROUTES.commercialTrades, label: "Commercial trades" },
 ] as const;
 
 export function MarketingFooter() {

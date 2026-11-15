@@ -36,6 +36,7 @@ B2B companies with 5–50 field reps selling to local businesses with physical l
 - Pricing: https://clefmark.com/pricing
 - About: https://clefmark.com/about
 - Field sales: https://clefmark.com/for/field-sales
+- Commercial trades: https://clefmark.com/for/commercial-trades
 - Contact: https://clefmark.com/contact
 - App signup: https://app.clefmark.com/signup
 - App login: https://app.clefmark.com/login
