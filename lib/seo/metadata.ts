@@ -2,8 +2,16 @@ import type { Metadata } from "next";
 
 import { pageUrl, type SeoConfig } from "@/content/marketing/seo";
 
+export const DEFAULT_OG_IMAGE = "/og.png";
+
 export function createPageMetadata(config: SeoConfig): Metadata {
   const url = pageUrl(config.path);
+  const ogImage = {
+    url: config.ogImage ?? DEFAULT_OG_IMAGE,
+    width: 1200,
+    height: 630,
+    alt: config.ogAlt ?? `${config.title} · Clefmark`,
+  };
 
   return {
     title: config.title,
@@ -18,20 +26,13 @@ export function createPageMetadata(config: SeoConfig): Metadata {
       siteName: "Clefmark",
       locale: "en_US",
       type: "website",
-      images: [
-        {
-          url: "/opengraph-image",
-          width: 1200,
-          height: 630,
-          alt: "Territory sales software that starts on the map · Clefmark",
-        },
-      ],
+      images: [ogImage],
     },
     twitter: {
       card: "summary_large_image",
       title: `${config.title} · Clefmark`,
       description: config.description,
-      images: ["/opengraph-image"],
+      images: [ogImage.url],
     },
   };
 }
