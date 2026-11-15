@@ -4,6 +4,8 @@ export type SeoConfig = {
   title: string;
   description: string;
   path: string;
+  ogImage?: string;
+  ogAlt?: string;
 };
 
 const DEFAULT_DESCRIPTION =
@@ -21,42 +23,56 @@ export const SEO_PAGES: Record<string, SeoConfig> = {
     description:
       "Discover local businesses on the map, save them to Clients, and follow up from Gmail with playbooks and Clefmark assistant. 14-day trial, no card required.",
     path: MARKETING_ROUTES.home,
+    ogAlt: "Territory sales software that starts on the map · Clefmark",
   },
   features: {
     title: "Features",
     description:
       "Explore, Clients, Gmail inbox, Playbooks, automation, and Clefmark assistant — seven pillars for territory sales teams.",
     path: MARKETING_ROUTES.features,
+    ogImage: "/og-features.png",
+    ogAlt: "Everything your field team needs in one place · Clefmark",
   },
   pricing: {
     title: "Pricing",
     description:
       "Plans from $29/mo for solo reps to teams up to 25 seats. 14-day trial. No card needed.",
     path: MARKETING_ROUTES.pricing,
+    ogImage: "/og-pricing.png",
+    ogAlt: "Simple seat tiers · Clefmark",
   },
   about: {
     title: "About",
     description:
       "Clefmark is a territory sales OS for B2B field teams. Map-first discovery, Gmail follow-up, and playbooks in one product.",
     path: MARKETING_ROUTES.about,
+    ogImage: "/og-about.png",
+    ogAlt: "Territory sales, tied together · Clefmark",
   },
   contact: {
     title: "Contact",
     description:
       "Get in touch with Clefmark. Request a demo or ask about territory sales for your field team.",
     path: MARKETING_ROUTES.contact,
+    ogImage: "/og-contact.png",
+    ogAlt: "Contact Clefmark",
   },
   fieldSales: {
     title: "Territory sales software for field B2B teams",
     description:
       "Map-based discovery, client management, Gmail inbox, and playbooks for reps who sell by territory — not from a desk.",
     path: MARKETING_ROUTES.fieldSales,
+    ogImage: "/og-field-sales.png",
+    ogAlt: "Territory sales software for field B2B teams · Clefmark",
   },
   commercialPestControl: {
     title: "Territory sales software for commercial pest control",
     description:
       "Run your commercial pest-control territory from the map, not a spreadsheet. Find restaurants, property managers, and other local accounts, keep them in Clients, and follow up from Gmail.",
     path: MARKETING_ROUTES.commercialPestControl,
+    ogImage: "/og-commercial-pest-control.png",
+    ogAlt:
+      "Run your commercial pest-control territory from the map, not a spreadsheet · Clefmark",
   },
   privacy: {
     title: "Privacy",

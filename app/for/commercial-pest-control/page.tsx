@@ -36,7 +36,9 @@ export default function CommercialPestControlPage() {
           {COMMERCIAL_PEST_CONTROL_INTRO.definitive}
         </p>
         <h1 className="mt-6 font-display text-4xl font-semibold tracking-tight text-foreground md:text-5xl">
-          {COMMERCIAL_PEST_CONTROL_INTRO.headline}
+          Run your commercial{" "}
+          <span className="md:whitespace-nowrap">pest-control</span> territory from
+          the map, not a spreadsheet.
         </h1>
         <p className="mt-4 text-lg leading-7 text-muted-foreground">
           {COMMERCIAL_PEST_CONTROL_INTRO.subhead}

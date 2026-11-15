@@ -9,7 +9,7 @@ import {
   softwareApplicationJsonLd,
   webSiteJsonLd,
 } from "@/lib/seo/json-ld";
-import { getGscVerification } from "@/lib/seo/metadata";
+import { DEFAULT_OG_IMAGE, getGscVerification } from "@/lib/seo/metadata";
 import { SEO_DEFAULT } from "@/content/marketing/seo";
 
 import "./globals.css";
@@ -41,6 +41,8 @@ export const metadata: Metadata = {
     icon: [
       { url: "/icon.svg", type: "image/svg+xml" },
       { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
+      { url: "/icon-512.png", type: "image/png", sizes: "512x512" },
     ],
     shortcut: "/favicon.ico",
     apple: "/apple-touch-icon.png",
@@ -52,11 +54,20 @@ export const metadata: Metadata = {
     siteName: "Clefmark",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: "Territory sales software that starts on the map · Clefmark",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${SEO_DEFAULT.title} · Clefmark`,
     description: SEO_DEFAULT.description,
+    images: [DEFAULT_OG_IMAGE],
   },
   ...getGscVerification(),
 };
