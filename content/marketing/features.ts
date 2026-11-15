@@ -13,7 +13,7 @@ export const PILLARS: readonly Pillar[] = [
     title: "Discover",
     summary: "Map and list search with place providers — territory-first.",
     outcomes: [
-      "Search Google, Apple, and Yelp from map or list view",
+      "Search Google Places from map or list view",
       "Filter by territory and preview before you save",
       "Pins reflect client status across your map",
     ],
@@ -31,27 +31,27 @@ export const PILLARS: readonly Pillar[] = [
   {
     id: "communicate",
     title: "Communicate",
-    summary: "One Inbox for email and SMS, linked to Clients.",
+    summary: "A Gmail inbox, linked to Clients.",
     outcomes: [
-      "OAuth mailboxes — Gmail, Microsoft 365, Zoho",
-      "Org phone numbers for SMS",
+      "Connect Gmail with OAuth",
       "Signatures and threads tied to the client record",
+      "Reply without leaving the client workspace",
     ],
   },
   {
     id: "automate",
     title: "Automate",
-    summary: "Scheduled outreach across email, SMS, and print mail.",
+    summary: "Scheduled email outreach from the client record.",
     outcomes: [
-      "Schedule emails and texts from the client record",
-      "Print mail — postcards, letters, self-mailers",
+      "Schedule emails from the client record",
+      "Timed follow-up without a separate engagement tool",
       "Outbound sends audited for your team",
     ],
   },
   {
     id: "playbooks",
     title: "Playbooks",
-    summary: "Team sequences — call, email, SMS, print, task, wait steps.",
+    summary: "Team sequences — call, email, task, and wait steps.",
     outcomes: [
       "Start a sequence from any client",
       "Managers publish team playbook templates",
@@ -82,7 +82,7 @@ export const PILLARS: readonly Pillar[] = [
 
 export const FEATURES_INTRO = {
   definitive:
-    "Clefmark is a territory sales OS for B2B field teams. Reps discover businesses on the map, save them to Clients, communicate from one Inbox, and run Playbooks — with Clefmark assistant grounded in each org's library and rules.",
+    "Clefmark is a territory sales OS for B2B field teams. Reps discover businesses on the map, save them to Clients, follow up from Gmail, and run Playbooks — with Clefmark assistant grounded in each org's library and rules.",
   headline: "Everything your field team needs in one place.",
   subhead:
     "Seven pillars that tie discovery, client work, communication, and follow-up together.",

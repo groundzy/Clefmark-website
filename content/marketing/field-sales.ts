@@ -2,7 +2,7 @@ import { CLEFMARK_ASSISTANT } from "@/lib/copy";
 
 export const FIELD_SALES_INTRO = {
   definitive:
-    "Clefmark is a territory sales OS for B2B field teams. Reps discover businesses on the map, save them to Clients, communicate from one Inbox, and run Playbooks — with Clefmark assistant grounded in each org's library and rules.",
+    "Clefmark is a territory sales OS for B2B field teams. Reps discover businesses on the map, save them to Clients, follow up from Gmail, and run Playbooks — with Clefmark assistant grounded in each org's library and rules.",
   headline: "Territory sales software for field B2B teams",
   subhead:
     "Reps who sell by route need more than a contact list. Clefmark starts from the map and ties discovery, follow-up, and messaging together.",
@@ -22,15 +22,15 @@ export const FIELD_SALES_PROBLEM = {
 export const FIELD_SALES_PILLARS = [
   {
     title: "Explore",
-    body: "Map and list search with Google, Apple, and Yelp. Territory filters. Save to Clients.",
+    body: "Map and list search with Google Places. Territory filters. Save to Clients.",
   },
   {
     title: "Inbox",
-    body: "Email and SMS in one place, linked to the client — not scattered across tools.",
+    body: "Gmail in one place, linked to the client — not scattered across tools.",
   },
   {
     title: "Playbooks",
-    body: "Team sequences for calls, emails, SMS, print, tasks, and waits.",
+    body: "Team sequences for calls, emails, tasks, and waits.",
   },
   {
     title: CLEFMARK_ASSISTANT,

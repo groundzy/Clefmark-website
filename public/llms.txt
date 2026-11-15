@@ -1,22 +1,22 @@
 # Clefmark
 
-> Territory sales OS for B2B field teams.
+> Territory sales software that starts on the map.
 
 Clefmark is a territory sales platform for B2B teams whose reps work in the real world — driving routes, visiting locations, and building relationships with businesses that have a physical address.
 
-Unlike desk-first tools built around contact lists, Clefmark starts from where: a map, a territory, a place worth pursuing. Reps discover clients on the map, work them through playbooks, and communicate from one inbox — email, SMS, and print mail — with Clefmark assistant grounded in each organization's industry, library, and rules.
+Unlike desk-first tools built around contact lists, Clefmark starts from where: a map, a territory, a place worth pursuing. Reps discover clients on the map, work them through playbooks, and follow up from Gmail — with Clefmark assistant grounded in each organization's industry, library, and rules.
 
 ## Who it's for
 
-B2B companies with 5–50 field reps selling to local businesses with physical locations: commercial services, distribution, equipment, franchise development, vertical SaaS, and similar.
+B2B companies with 5–50 field reps selling to local businesses with physical locations. The current beachhead is commercial trades and facility services (HVAC, electrical, plumbing, fire protection, janitorial, and similar). The product also supports distribution, equipment, franchise development, and vertical SaaS.
 
 ## Product pillars
 
-- Discover — map and list search with Google, Apple, Yelp; territory filters
+- Discover — map and list search with Google Places; territory filters
 - Clients — accounts on your map with contacts, progress, tasks, deals, timeline
-- Communicate — unified Inbox for email and SMS
-- Automate — scheduled email, SMS, and print mail
-- Playbooks — team sequences with call, email, SMS, print, task, wait steps
+- Communicate — Gmail inbox tied to the client record
+- Automate — scheduled email from the client record
+- Playbooks — team sequences with call, email, task, and wait steps
 - Program — team and personal library; activity tracking
 - Customize — industry pack, assistant rules, search presets, templates
 
@@ -27,6 +27,7 @@ B2B companies with 5–50 field reps selling to local businesses with physical l
 - Growth: $199/mo, up to 10 seats
 - Scale: $399/mo, up to 25 seats
 - 14-day trial, no card required
+- Trial caps: 25 outbound emails and 50 Clefmark assistant drafts
 
 ## Key URLs
 

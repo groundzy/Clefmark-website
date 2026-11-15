@@ -4,7 +4,7 @@ import { SITE_URL } from "@/content/marketing/routes";
 import type { FaqItem } from "@/content/marketing/faq";
 
 const DEFAULT_DESCRIPTION =
-  "Territory sales OS for B2B field teams. Map-based discovery, Clients, unified Inbox, Playbooks, and Clefmark assistant.";
+  "Territory sales OS for B2B field teams. Map-based discovery, Clients, Gmail inbox, Playbooks, and Clefmark assistant.";
 
 export function organizationJsonLd() {
   return {

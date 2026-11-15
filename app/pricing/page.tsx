@@ -49,8 +49,7 @@ export default function PricingPage() {
           <PricingCards />
         </div>
 
-        <p className="mt-8 text-sm text-muted-foreground">{PRICING_INTRO.usageNote}</p>
-        <p className="mt-2 text-sm text-muted-foreground">
+        <p className="mt-8 text-sm text-muted-foreground">
           {PRICING_INTRO.enterpriseNote}{" "}
           <Link href={MARKETING_ROUTES.contact} className="text-accent hover:underline">
             Contact us

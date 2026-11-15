@@ -2,7 +2,7 @@ import { CLEFMARK_ASSISTANT } from "@/lib/copy";
 
 export const ABOUT_INTRO = {
   definitive:
-    "Clefmark is a territory sales OS for B2B field teams. Reps discover businesses on the map, save them to Clients, communicate from one Inbox, and run Playbooks — with Clefmark assistant grounded in each org's library and rules.",
+    "Clefmark is a territory sales OS for B2B field teams. Reps discover businesses on the map, save them to Clients, follow up from Gmail, and run Playbooks — with Clefmark assistant grounded in each org's library and rules.",
   headline: "Territory sales, tied together.",
   subhead:
     "Clefmark is for B2B teams whose reps work in the real world — driving routes, visiting locations, and building relationships with businesses that have a physical address.",
@@ -30,7 +30,7 @@ export const ROLES = [
   {
     role: "Sales rep",
     description:
-      "Explore territory on the map, save places to Clients, send email and SMS, run playbooks, log activity",
+      "Explore territory on the map, save places to Clients, send email, run playbooks, log activity",
   },
   {
     role: "Sales manager",
@@ -50,7 +50,7 @@ export const DIFFERENTIATION = [
   },
   {
     compared: "Field map tools",
-    edge: "Deeper playbooks, unified Inbox, org-grounded assistant, team library",
+    edge: "Deeper playbooks, Gmail inbox, org-grounded assistant, team library",
   },
   {
     compared: "Engagement-only tools",
@@ -59,10 +59,7 @@ export const DIFFERENTIATION = [
 ] as const;
 
 export const CHANNELS = [
-  "Email — Gmail, Microsoft 365, Zoho via OAuth",
-  "SMS — org phone numbers",
-  "Print mail — postcards, letters, self-mailers",
-  "Scheduling — Calendly, Zoom",
+  "Email — Gmail via OAuth",
   `${CLEFMARK_ASSISTANT} — drafts grounded in your library and rules`,
 ] as const;
 

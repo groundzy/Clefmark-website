@@ -23,7 +23,7 @@ export const PRICING_TIERS: readonly PricingTier[] = [
     monthly: 114,
     yearly: 1140,
     seatCap: "Up to 5 seats",
-    description: "Growing field teams with playbooks and Inbox.",
+    description: "Growing field teams with playbooks and Gmail inbox.",
     highlight: true,
   },
   {
@@ -32,7 +32,7 @@ export const PRICING_TIERS: readonly PricingTier[] = [
     monthly: 199,
     yearly: 1990,
     seatCap: "Up to 10 seats",
-    description: "Larger orgs with automation and usage meters.",
+    description: "Larger field teams standardizing playbooks and follow-up.",
   },
   {
     planId: "scale",
@@ -45,11 +45,9 @@ export const PRICING_TIERS: readonly PricingTier[] = [
 ] as const;
 
 export const PRICING_INTRO = {
-  headline: "Simple seat tiers. Usage billed separately.",
+  headline: "Simple seat tiers.",
   subhead: "14-day trial on every plan. No card needed to start.",
   trialNote: "Free for 14 days. No card needed.",
-  usageNote:
-    "SMS segments, assistant usage, and print mail are billed separately. Rates published before billing goes live.",
   enterpriseNote:
     "Need 26+ seats? Contact us for custom pricing — not self-serve in v0.1.",
 } as const;
@@ -59,7 +57,7 @@ export const PRICING_FAQ = [
     id: "trial",
     question: "How does the 14-day trial work?",
     answer:
-      "Every new workspace starts with a 14-day trial. No card required. You get full access to Explore, Clients, Inbox, and Playbooks. Billing setup comes later in Admin.",
+      "Every new workspace starts with a 14-day trial. No card required. During the trial you can send up to 25 outbound emails and create up to 50 Clefmark assistant drafts.",
   },
   {
     id: "cancel",
@@ -89,6 +87,6 @@ export const PRICING_FAQ = [
     id: "trial-limits",
     question: "Are there limits during the trial?",
     answer:
-      "Trial workspaces can send up to 25 outbound emails. Receive and sync are unlimited. Other usage caps apply at billing launch.",
+      "Yes. During the trial you can send up to 25 outbound emails and create up to 50 Clefmark assistant drafts. Receiving and syncing email are not capped by those limits.",
   },
 ] as const;

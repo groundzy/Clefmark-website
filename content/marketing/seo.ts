@@ -7,25 +7,25 @@ export type SeoConfig = {
 };
 
 const DEFAULT_DESCRIPTION =
-  "Territory sales OS for field B2B teams. Map-based discovery, Clients, unified Inbox, Playbooks, and Clefmark assistant — in one place.";
+  "Territory sales OS for field B2B teams. Map-based discovery, Clients, Gmail inbox, Playbooks, and Clefmark assistant — in one place.";
 
 export const SEO_DEFAULT = {
-  title: "Territory sales, tied together",
+  title: "Territory sales software that starts on the map",
   description: DEFAULT_DESCRIPTION,
   path: MARKETING_ROUTES.home,
 } as const;
 
 export const SEO_PAGES: Record<string, SeoConfig> = {
   home: {
-    title: "Territory sales, tied together",
+    title: "Territory sales software that starts on the map",
     description:
-      "Territory sales OS for field B2B teams. Discover on the map, work Clients, reply from one Inbox, and run Playbooks.",
+      "Discover local businesses on the map, save them to Clients, and follow up from Gmail with playbooks and Clefmark assistant. 14-day trial, no card required.",
     path: MARKETING_ROUTES.home,
   },
   features: {
     title: "Features",
     description:
-      "Explore, Clients, Inbox, Playbooks, automation, and Clefmark assistant — seven pillars for territory sales teams.",
+      "Explore, Clients, Gmail inbox, Playbooks, automation, and Clefmark assistant — seven pillars for territory sales teams.",
     path: MARKETING_ROUTES.features,
   },
   pricing: {
@@ -37,7 +37,7 @@ export const SEO_PAGES: Record<string, SeoConfig> = {
   about: {
     title: "About",
     description:
-      "Clefmark is a territory sales OS for B2B field teams. Map-first discovery, unified communication, and playbooks in one product.",
+      "Clefmark is a territory sales OS for B2B field teams. Map-first discovery, Gmail follow-up, and playbooks in one product.",
     path: MARKETING_ROUTES.about,
   },
   contact: {
@@ -49,7 +49,7 @@ export const SEO_PAGES: Record<string, SeoConfig> = {
   fieldSales: {
     title: "Territory sales software for field B2B teams",
     description:
-      "Map-based discovery, client management, unified Inbox, and playbooks for reps who sell by territory — not from a desk.",
+      "Map-based discovery, client management, Gmail inbox, and playbooks for reps who sell by territory — not from a desk.",
     path: MARKETING_ROUTES.fieldSales,
   },
   privacy: {

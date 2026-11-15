@@ -11,7 +11,7 @@ export const PRODUCT_FAQ: readonly FaqItem[] = [
     id: "what-is-clefmark",
     question: "What is Clefmark?",
     answer:
-      "Clefmark is a territory sales OS for B2B field teams. Reps discover businesses on the map, save them to Clients, communicate from one Inbox, and run Playbooks — with Clefmark assistant grounded in each org's library and rules.",
+      "Clefmark is a territory sales OS for B2B field teams. Reps discover businesses on the map, save them to Clients, follow up from Gmail, and run Playbooks — with Clefmark assistant grounded in each org's library and rules.",
   },
   {
     id: "who-for",
@@ -29,7 +29,7 @@ export const PRODUCT_FAQ: readonly FaqItem[] = [
     id: "channels",
     question: "What channels does Clefmark support?",
     answer:
-      "Email (Gmail, Microsoft 365, Zoho), SMS via org phone numbers, and print mail. All tied to the client record in one Inbox.",
+      "Gmail, tied to the client record. Connect your Google mailbox with OAuth and keep threads on the Client.",
   },
   {
     id: "assistant",
@@ -55,12 +55,12 @@ export const FIELD_SALES_FAQ: readonly FaqItem[] = [
     id: "map-discovery",
     question: "Can reps search for businesses on a map?",
     answer:
-      "Yes. Explore supports map and list search using Google, Apple, and Yelp place data. Reps filter by territory and save places directly to Clients.",
+      "Yes. Explore supports map and list search using Google Places. Reps filter by territory and save places directly to Clients.",
   },
   {
     id: "playbooks-field",
     question: "Do playbooks work for field follow-up?",
     answer:
-      "Playbooks support calls, emails, SMS, print mail, tasks, and timed waits — so managers can standardize how reps follow up across a territory.",
+      "Playbooks support calls, emails, tasks, and timed waits — so managers can standardize how reps follow up across a territory.",
   },
 ] as const;

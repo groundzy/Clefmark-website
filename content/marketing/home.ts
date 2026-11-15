@@ -1,20 +1,20 @@
 import { CLEFMARK_ASSISTANT } from "@/lib/copy";
 
 export const HERO = {
-  headline: "Territory sales, tied together.",
-  subhead: `Territory sales OS for field B2B teams. Discover on the map, work Clients, reply from one Inbox, and run Playbooks — with ${CLEFMARK_ASSISTANT} grounded in your library and rules.`,
+  headline: "Territory sales software that starts on the map.",
+  subhead: `Discover local businesses in Explore, save them to Clients, and run follow-up from Gmail — with playbooks and ${CLEFMARK_ASSISTANT}. Built for field teams of 5–50 reps. 14-day trial, no card required.`,
 } as const;
 
 export const EMPATHY = {
   headline: "Reps sell by territory. Most tools were built for desks.",
-  body: `When discovery, follow-up, and messaging live in different places, context gets lost and territory work slows down. Clefmark gives your team Explore, Clients, one Inbox, and Playbooks in a single flow — plus ${CLEFMARK_ASSISTANT} tuned to how you sell.`,
+  body: `When discovery, follow-up, and messaging live in different places, context gets lost and territory work slows down. Clefmark gives your team Explore, Clients, a Gmail inbox, and Playbooks in a single flow — plus ${CLEFMARK_ASSISTANT} tuned to how you sell.`,
 } as const;
 
 export const WORKFLOW_STEPS = [
   {
     id: "explore",
     title: "Explore",
-    body: "Search the map and list — Google, Apple, Yelp — and preview places before you save them.",
+    body: "Search the map and list with Google Places, and preview places before you save them.",
   },
   {
     id: "clients",
@@ -24,12 +24,12 @@ export const WORKFLOW_STEPS = [
   {
     id: "inbox",
     title: "Inbox",
-    body: "Email and SMS in one thread, tied to the client — not a separate tool.",
+    body: "Gmail in one thread, tied to the client — not a separate tool.",
   },
   {
     id: "playbooks",
     title: "Playbooks",
-    body: "Team sequences: calls, emails, SMS, print mail, tasks, and timed waits.",
+    body: "Team sequences: calls, emails, tasks, and timed waits.",
   },
   {
     id: "progress",
@@ -47,7 +47,7 @@ export const COMPARISON_ROWS = [
   {
     category: "Map-only tools",
     gap: "Find places but stop short of follow-up",
-    clefmark: "Playbooks, unified Inbox, and team library",
+    clefmark: "Playbooks, Gmail inbox, and team library",
   },
   {
     category: "Engagement-only tools",
